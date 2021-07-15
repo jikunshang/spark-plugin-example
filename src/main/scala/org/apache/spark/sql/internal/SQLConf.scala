@@ -199,6 +199,12 @@ object SQLConf {
     }
   }
 
+  val TIANCHI_USER_DEFINED_CONFIG = buildConf("spark.sql.tianchi.user.defined.config")
+    .doc("This is just an example for user, you can use this change in your code")
+    .version("3.1.2")
+    .booleanConf
+    .createWithDefault(false)
+
   val ANALYZER_MAX_ITERATIONS = buildConf("spark.sql.analyzer.maxIterations")
     .internal()
     .doc("The max number of iterations the analyzer runs.")
